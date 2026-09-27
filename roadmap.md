@@ -1,0 +1,3 @@
+- [ ] Add an in-app screenshot comparison workspace with two uploads and clear results.
+- [ ] Analyze screenshots securely on the server through Lovable AI Gateway.
+- [ ] Verify the flow and responsive layout.
