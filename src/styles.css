@@ -203,7 +203,7 @@ h1 span { color: var(--primary); }
   .hero-copy { padding: 76px 0 0 69px; }
   .eyebrow { height: 38px; padding: 0 19px; font-size: 14px; gap: 13px; }
   .eyebrow svg { width: 19px; height: 19px; }
-  h1 { margin: 31px 0 19px; font-size: 77px; line-height: 1.02; letter-spacing: 0; }
+  h1 { margin: 31px 0 27px; font-size: 73px; line-height: 1.02; letter-spacing: 0; }
   .hero-intro { max-width: 690px; font-size: 21px; line-height: 1.53; }
   .contact-methods { max-width: 676px; gap: 16px 20px; margin-top: 32px; }
   .contact-method { height: 98px; padding: 14px 16px; gap: 16px; border-radius: 15px; }
@@ -214,8 +214,8 @@ h1 span { color: var(--primary); }
   .contact-method small { font-size: 14px; }
   .method-arrow { width: 24px; height: 24px; }
   .visual-side { min-height: 736px; overflow: visible; }
-  .mint-halo { width: 480px; height: 440px; left: -170px; top: 36px; opacity: .7; }
-  .mint-halo-secondary { width: 340px; height: 330px; left: 0; top: 278px; opacity: .55; }
+  .mint-halo { width: 480px; height: 440px; left: 5px; top: 36px; opacity: .7; }
+  .mint-halo-secondary { width: 340px; height: 330px; left: 165px; top: 278px; opacity: .45; }
   .contact-person { width: 610px; height: 610px; right: -12px; bottom: 17px; }
   .hand-note { top: 43px; right: 220px; font-size: 27px; transform: rotate(-14deg); }
   .hand-note span { right: -26px; bottom: -58px; font-size: 65px; }
