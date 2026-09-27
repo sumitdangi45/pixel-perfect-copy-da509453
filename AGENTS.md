@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep this screenshot-inspired pricing experience on the index route, with visual tokens in `src/styles.css` and shared button variants in `src/components/ui/button.tsx`, so layout and controls stay consistent.
