@@ -9,4 +9,4 @@
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
 
-- Keep this screenshot-inspired pricing experience on the index route, with visual tokens in `src/styles.css` and shared button variants in `src/components/ui/button.tsx`, so layout and controls stay consistent.
+- Keep this screenshot-inspired contact experience on the index route, with visual tokens in `src/styles.css` and shared button variants in `src/components/ui/button.tsx`, so layout and controls stay consistent.
