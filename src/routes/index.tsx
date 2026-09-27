@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { ArrowRight, ChevronDown, ChevronRight, Grid2X2, Handshake, LockKeyhole, Mail, MapPin, Menu, MessageSquare, Phone, Send, ShieldCheck, UserRound, UsersRound, X, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import contactPerson from "@/assets/contact-person.png";
+import contactPerson from "@/assets/contact-person-matched.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
@@ -68,7 +68,6 @@ function ContactPage() {
           <div className="hand-note">Let's<br />Build Something<br />Amazing Together <span>↙</span></div>
           <div className="spark spark-one" /><div className="spark spark-two" />
           <img className="contact-person" src={contactPerson} alt="Anni team member working at a laptop" width={1024} height={1024} />
-          <div className="plant-note" aria-hidden="true">Ideas<br />Into<br />Reality<br />⌣</div>
         </div>
 
         <form className="message-form" onSubmit={sendMessage}>
