@@ -186,3 +186,56 @@ h1 span { color: var(--primary); }
   .stat small { font-size: 8px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .contact-method { transition: none; } }
+
+/* The reference is composed on a 1536px canvas; keep its geometry intact on desktop. */
+@media (min-width: 901px) {
+  .site { width: 1536px; min-height: 1024px; zoom: calc(100vw / 1536px); background: radial-gradient(ellipse at 82% 46%, var(--mint) 0%, transparent 49%), var(--background); }
+  .site-header { margin: 16px 22px 0; height: 80px; padding: 0 38px; border-radius: 18px 18px 0 0; gap: 39px; }
+  .brand { flex-basis: 255px; gap: 10px; }
+  .brand-symbol { transform: scale(1.28); transform-origin: left center; margin-right: 12px; }
+  .brand-copy strong { font-size: 31px; letter-spacing: 0; }
+  .brand-copy small { font-size: 10px; }
+  .site-nav { gap: 32px; }
+  .site-nav a { font-size: 15px; }
+  .site-nav a.active::after { width: 96px; }
+  .header-quote { height: 50px; min-width: 224px; border-radius: 12px; font-size: 15px; }
+  .contact-hero { max-width: none; width: 1536px; height: 736px; min-height: 736px; grid-template-columns: 51% 49%; }
+  .hero-copy { padding: 76px 0 0 69px; }
+  .eyebrow { height: 38px; padding: 0 19px; font-size: 14px; gap: 13px; }
+  .eyebrow svg { width: 19px; height: 19px; }
+  h1 { margin: 31px 0 19px; font-size: 77px; line-height: 1.02; letter-spacing: 0; }
+  .hero-intro { max-width: 690px; font-size: 21px; line-height: 1.53; }
+  .contact-methods { max-width: 676px; gap: 16px 20px; margin-top: 32px; }
+  .contact-method { height: 98px; padding: 14px 16px; gap: 16px; border-radius: 15px; }
+  .method-icon { width: 60px; height: 60px; flex-basis: 60px; }
+  .method-icon svg { width: 30px; height: 30px; }
+  .whatsapp-icon svg { width: 26px; height: 26px; }
+  .contact-method strong { font-size: 16px; }
+  .contact-method small { font-size: 14px; }
+  .method-arrow { width: 24px; height: 24px; }
+  .visual-side { min-height: 736px; overflow: visible; }
+  .mint-halo { width: 480px; height: 440px; left: -170px; top: 36px; opacity: .7; }
+  .mint-halo-secondary { width: 340px; height: 330px; left: 0; top: 278px; opacity: .55; }
+  .contact-person { width: 610px; height: 610px; right: -12px; bottom: 17px; }
+  .hand-note { top: 43px; right: 220px; font-size: 27px; transform: rotate(-14deg); }
+  .hand-note span { right: -26px; bottom: -58px; font-size: 65px; }
+  .spark-one { right: 37px; top: 78px; }
+  .spark-two { left: 199px; top: 372px; }
+  .message-form { left: 782px; top: 148px; width: 460px; min-height: 525px; padding: 27px 26px 26px; border-radius: 16px; box-shadow: 0 22px 50px oklch(0.35 0.05 165 / 11%); }
+  .message-form h2 { font-size: 24px; margin-bottom: 6px; letter-spacing: 0; }
+  .message-form > p { font-size: 14px; margin-bottom: 25px; }
+  .form-grid { gap: 16px 14px; }
+  .field { height: 59px; padding: 0 11px; gap: 7px; border-radius: 9px; }
+  .field > svg:first-child { width: 29px; height: 29px; flex-basis: 29px; padding: 5px; }
+  .field input, .field select, .field textarea { font-size: 13px; }
+  .message-field { margin-top: 16px; height: 129px; padding-top: 13px; }
+  .message-field textarea { height: 105px; }
+  .send-button { height: 54px; margin-top: 20px; font-size: 16px; border-radius: 8px; }
+  .privacy { margin-top: 17px; font-size: 12px; }
+  .stats-band { width: 1492px; max-width: none; margin: 0 22px 48px; height: 144px; padding: 0 46px; border-radius: 16px; }
+  .stat { height: 55px; gap: 22px; padding: 0 30px; }
+  .stat-icon { width: 65px; height: 65px; flex-basis: 65px; }
+  .stat-icon svg { width: 32px; height: 32px; }
+  .stat strong { font-size: 16px; }
+  .stat small { font-size: 14px; }
+}
