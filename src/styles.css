@@ -240,6 +240,9 @@ h1 span { color: var(--primary); }
   .stat small { font-size: 14px; }
 }
 /* Editor workspace */
+.site-editor-footer { text-align: center; padding: 10px 0 26px; font-size: 11px; }
+.site-editor-footer a { display: inline-flex; align-items: center; gap: 5px; color: var(--muted-foreground); text-decoration: none; }
+.site-editor-footer a:hover { color: var(--primary); }
 .review-page { min-height: 100vh; background: var(--background); color: var(--foreground); }
 .review-header { height: 72px; padding: 0 max(24px, calc((100% - 1160px) / 2)); display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--border); background: var(--card); }
 .review-back { color: var(--foreground); text-decoration: none; display: inline-flex; align-items: center; gap: 9px; font-weight: 800; font-size: 14px; }

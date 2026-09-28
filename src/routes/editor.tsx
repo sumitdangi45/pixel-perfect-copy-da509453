@@ -71,7 +71,7 @@ function EditorPage() {
 
   async function handleGoogle() {
     setAuthError(''); setAuthBusy(true)
-    const response = await lovable.auth.signInWithOAuth('google', { redirect_uri: window.location.origin })
+    const response = await lovable.auth.signInWithOAuth('google', { redirect_uri: `${window.location.origin}/editor` })
     if (response.error) setAuthError(response.error.message)
     if (!response.redirected) setAuthBusy(false)
   }
@@ -96,6 +96,8 @@ function EditorPage() {
         const { value, done } = await reader.read()
         if (done) break
         text += decoder.decode(value, { stream: true })
+        const failure = text.indexOf('[VISUAL_REVIEW_ERROR]')
+        if (failure !== -1) throw new Error(text.slice(failure + '[VISUAL_REVIEW_ERROR]'.length).trim())
         setResult(text)
       }
       text += decoder.decode()

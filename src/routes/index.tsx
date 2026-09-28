@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { ArrowRight, ChevronDown, ChevronRight, Grid2X2, Handshake, LockKeyhole, Mail, MapPin, Menu, MessageSquare, Phone, Send, ShieldCheck, UserRound, UsersRound, X, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -91,5 +91,6 @@ function ContactPage() {
         <div className="stat"><span className="stat-icon"><Handshake /></span><span><strong>Long-Term Partnership</strong><small>We Grow Together</small></span></div>
       </div></section>
     </main>
+    <footer className="site-editor-footer"><Link to="/editor">Visual review for editors <ArrowRight size={14} /></Link></footer>
   </div>;
 }
