@@ -71,7 +71,7 @@ function EditorPage() {
 
   async function handleGoogle() {
     setAuthError(''); setAuthBusy(true)
-    const response = await lovable.auth.signInWithOAuth('google', { redirect_uri: window.location.origin })
+    const response = await lovable.auth.signInWithOAuth('google', { redirect_uri: `${window.location.origin}/editor` })
     if (response.error) setAuthError(response.error.message)
     if (!response.redirected) setAuthBusy(false)
   }

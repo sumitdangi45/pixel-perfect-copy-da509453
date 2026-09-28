@@ -23,6 +23,7 @@ export async function analyzeScreenshots(reference: File, current: File) {
   const result = streamText({
     model: gateway.responses('openai/gpt-6-astra'),
     messages,
+    maxRetries: 0,
     providerOptions: { openai: { forceReasoning: true, reasoningEffort: 'medium', reasoningSummary: 'auto', store: false, include: ['reasoning.encrypted_content'] } },
   })
   return result
