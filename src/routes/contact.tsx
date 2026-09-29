@@ -4,7 +4,7 @@ import { ArrowRight, ChevronDown, ChevronRight, Grid2X2, Handshake, LockKeyhole,
 import { Button } from "@/components/ui/button";
 import contactPerson from "@/assets/contact-person-matched.png";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/contact")({
   head: () => ({ meta: [
     { title: "Contact Us | Anni Web Solutions" },
     { name: "description", content: "Get in touch with Anni Web Solutions for a custom website, AI automation, or digital marketing consultation." },
