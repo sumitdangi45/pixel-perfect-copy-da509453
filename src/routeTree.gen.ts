@@ -10,12 +10,18 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as EditorRouteImport } from './routes/editor'
 import { Route as ApiVisualReviewRouteImport } from './routes/api/visual-review'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EditorRoute = EditorRouteImport.update({
@@ -31,30 +37,34 @@ const ApiVisualReviewRoute = ApiVisualReviewRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
   '/editor': typeof EditorRoute
   '/api/visual-review': typeof ApiVisualReviewRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
   '/editor': typeof EditorRoute
   '/api/visual-review': typeof ApiVisualReviewRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
   '/editor': typeof EditorRoute
   '/api/visual-review': typeof ApiVisualReviewRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/editor' | '/api/visual-review'
+  fullPaths: '/' | '/contact' | '/editor' | '/api/visual-review'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/editor' | '/api/visual-review'
-  id: '__root__' | '/' | '/editor' | '/api/visual-review'
+  to: '/' | '/contact' | '/editor' | '/api/visual-review'
+  id: '__root__' | '/' | '/contact' | '/editor' | '/api/visual-review'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContactRoute: typeof ContactRoute
   EditorRoute: typeof EditorRoute
   ApiVisualReviewRoute: typeof ApiVisualReviewRoute
 }
@@ -66,6 +76,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/editor': {
@@ -87,6 +104,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContactRoute: ContactRoute,
   EditorRoute: EditorRoute,
   ApiVisualReviewRoute: ApiVisualReviewRoute,
 }
